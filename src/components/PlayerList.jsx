@@ -24,14 +24,16 @@ function PlayerList() {
 
   return (
     <div>
-      <h1>Player List</h1>
-      <ul>
+      <h1>Puppy Bowl Players</h1>
+      <ul className='card-container'>
         {players.map(player => (
-          <li key={player.id}>
-            {player.imageUrl && <img src={player.imageUrl} alt={player.name} style={{ width: '100px', height: '100px', marginRight: '10px' }} />}
-            <span>{player.name}</span>
-            <Link to={`/players/${player.id}`} style={{ marginLeft: '10px' }}>See Details</Link>
-          </li>
+          <div className='card' key={player.id}>
+            {player.imageUrl && <img src={player.imageUrl} alt={player.name} className='card-image' />}
+            <div className='card-details'>
+              <span>{player.name}</span>
+              <Link to={`/players/${player.id}`} className='details-button'>See Details</Link>
+            </div>
+          </div>
         ))}
       </ul>
     </div>

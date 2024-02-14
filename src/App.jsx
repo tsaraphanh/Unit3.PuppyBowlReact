@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import PlayerList from './components/PlayerList';
+import './App.css';
 
 function App() {
   return (
