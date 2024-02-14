@@ -49,3 +49,10 @@ h1 {
   background-color: #0056b3;
   color: #fff;
 }
+
+/* player details */
+
+.player-details-image {
+  max-width: 800px;
+  max-height: 800px;
+}
