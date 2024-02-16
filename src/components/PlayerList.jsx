@@ -40,7 +40,6 @@ function PlayerList({ searchText }) {
   return (
     <div>
       <h1>Puppy Bowl Players</h1>
-      <SearchBar onSearch={handleSearch} />
       <ul className='card-container'>
         {filteredPlayers.map(player => (
           <div className='card' key={player.id}>
