@@ -8,6 +8,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 60px;
 }
 
 /* player cards */
@@ -71,10 +72,15 @@ h1 {
   margin-bottom: 20px;
 }
 
+
+/* header */
 .header {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px; 
 }
 
 .create-player-button {

@@ -38,7 +38,9 @@ function PlayerList({ searchText }) {
   }, [searchText, players]);
 
   return (
+    
     <div className='player-list-container'>
+      <h1>Puppy Bowl Players</h1>
       <ul className='card-container'>
         {filteredPlayers.map(player => (
           <div className='card' key={player.id}>

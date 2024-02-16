@@ -30,6 +30,7 @@ function App() {
           <SearchBar onSearch={handleSearch} />
         </div>
       </div>
+      <h1>Puppy Bowl Players</h1>
       <Routes>  
         <Route path="/" element={<PlayerList searchText={searchText} />} /> 
         <Route path='/players/:id' element={<PlayerDetails />} />
