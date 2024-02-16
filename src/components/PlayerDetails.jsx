@@ -1,11 +1,12 @@
 // PlayerDetails.js
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 function PlayerDetails() {
   const [player, setPlayer] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
   const cohortName = '2308-ACC-ET-WEB-PT-B';
   const APIURL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}/players/${id}`;
 
@@ -25,17 +26,20 @@ function PlayerDetails() {
   };
 
   const handleDelete = async () => {
-    try {
-      const response = await fetch(APIURL, {
-        method: 'DELETE'
-      });
-      if (response.ok) {
-        history.push('/'); // Redirect to home page after successful deletion
-      } else {
-        console.error('Failed to delete player');
+    const confirmed = window.confirm('Are you sure you want to delete');
+    if (confirmed) {
+      try {
+        const response = await fetch(APIURL, {
+          method: 'DELETE'
+        });
+        if (response.ok) {
+          navigate('/'); // Redirect to home page after successful deletion
+        } else {
+          console.error('Failed to delete player');
+        }
+      } catch (error) {
+        console.error('Error deleting player:', error);
       }
-    } catch (error) {
-      console.error('Error deleting player:', error);
     }
   };
 
