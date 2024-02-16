@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='app-container'>
       <div className="header">
         <button className="create-player-button" onClick={toggleCreatePlayerForm}>Create Player</button>
         {showCreatePlayerForm && <CreatePlayerForm />}
@@ -30,7 +30,6 @@ function App() {
           <SearchBar onSearch={handleSearch} />
         </div>
       </div>
-      <h1>Puppy Bowl Players</h1>
       <Routes>  
         <Route path="/" element={<PlayerList searchText={searchText} />} /> 
         <Route path='/players/:id' element={<PlayerDetails />} />

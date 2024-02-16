@@ -3,12 +3,54 @@ h1 {
   text-align: center;
 }
 
+.app-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* header */
+.header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px; 
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
 /* player list */
 .player-list-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
 }
 
 /* player cards */
@@ -60,31 +102,42 @@ h1 {
 
 /* player details */
 
-.player-details-image {
-  max-width: 800px;
-  max-height: 800px;
-}
-
-/*  */
-.search-container {
+.player-details-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  align-items: center;
+  height: 100vh;
 }
 
-
-/* header */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 10px; 
+.player-details {
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
 }
 
+.player-details-image {
+  max-width: 300px;
+  border-radius: 10px; 
+}
+
+/* create player button & form */
 .create-player-button {
-  margin-right: 10px; 
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+.create-player-button:hover {
+  background-color: #218838; 
+}
+
+.create-player-button:active {
+  transform: scale(0.95); 
+  background-color: #218838;
 }
 
 .create-player-form {

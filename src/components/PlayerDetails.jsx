@@ -44,9 +44,9 @@ function PlayerDetails() {
   };
 
   return (
-    <div>
+    <div className='player-details-container'>
       {player ? (
-        <div>
+        <div className="player-details">
           {player.imageUrl && <img src={player.imageUrl} alt={player.name} className='player-details-image' />}
           <h1>{player.name}</h1>
           <p>Breed: {player.breed}</p>
