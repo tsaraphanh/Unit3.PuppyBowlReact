@@ -1,22 +1,29 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import PlayerList from './components/PlayerList';
 import PlayerDetails from './components/PlayerDetails';
 import CreatePlayerForm from './components/CreatePlayerForm';
+import SearchBar from './components/SearchBar';
 import './App.css';
 
 
 
 function App() {
+  const [searchText, setSearchText] = useState('');
+  const handleSearch = (text) => {
+    setSearchText(text);
+  };
+
   return (
     <div>
-       <div>
+      <div>
         <CreatePlayerForm />
-       </div>
-      <Routes>
-        
-        <Route path="/" Component={PlayerList} /> 
-        <Route path='/players/:id' Component={PlayerDetails}/>
+      </div>
+      <SearchBar onSearch={handleSearch} />
+      <Routes>  
+        <Route path="/" element={<PlayerList searchText={searchText} />} /> 
+        <Route path='/players/:id' element={<PlayerDetails />} />
       </Routes>
     </div>
   );
