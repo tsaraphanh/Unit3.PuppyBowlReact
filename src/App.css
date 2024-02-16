@@ -3,6 +3,13 @@ h1 {
   text-align: center;
 }
 
+/* player list */
+.player-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* player cards */
 .card-container {
   display: flex;
@@ -55,4 +62,35 @@ h1 {
 .player-details-image {
   max-width: 800px;
   max-height: 800px;
+}
+
+/*  */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.create-player-button {
+  margin-right: 10px; 
+}
+
+.create-player-form {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+
+.create-player-form.active {
+  display: block;
 }

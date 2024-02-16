@@ -104,7 +104,7 @@ function CreatePlayerForm() {
           onChange={(e) => setTeam(e.target.value)}
         />
       </div>
-      <button type="submit">Create Player</button>
+      <button type="submit">Submit</button>
     </form>
   );
 }
